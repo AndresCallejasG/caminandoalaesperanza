@@ -3,84 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Informes PDF - Fundación Caminando a la Esperanza</title>
+  <title>Caminando a la Esperanza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --violeta-principal: #9404cc;
-      --morado-oscuro: #442c64;
-      --lavanda: #dcc4fc;
-      --texto: #2b2b2b;
+      --morado-principal: #4B207C;
+      --lavanda-suave: #dcc4fc;
       --blanco: #ffffff;
+      --gris: #f9f9f9;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--lavanda);
-      color: var(--texto);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--lavanda-suave);
+      color: var(--morado-principal);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
       min-height: 100vh;
-      margin: 0;
     }
 
     header {
+      background-color: var(--blanco);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      margin-bottom: 30px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     header img {
-      width: 100px;
+      width: 60px;
       height: auto;
-      margin-bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid var(--violeta-principal);
+      margin-right: 15px;
     }
 
-    h1 {
-      font-size: 2.2em;
-      color: var(--violeta-principal);
-      margin: 0;
+    header h1 {
+      font-size: 1.8em;
+      color: var(--morado-principal);
     }
 
-    p {
-      font-size: 1.1em;
-      color: var(--morado-oscuro);
+    .banner {
+      width: 100%;
+      height: 250px;
+      background-image: url('banner.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
       margin-bottom: 30px;
-      text-align: center;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .pdf-section {
+      background: var(--blanco);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .pdf-section h2 {
+      margin-bottom: 20px;
+      font-size: 1.4em;
     }
 
     ul {
       list-style: none;
-      padding: 0;
-      max-width: 600px;
-      width: 100%;
     }
 
     li {
-      background: var(--blanco);
       margin-bottom: 15px;
-      padding: 18px 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
-    }
-
-    li:hover {
-      transform: translateY(-3px);
     }
 
     a {
-      text-decoration: none;
-      color: var(--violeta-principal);
+      color: var(--morado-principal);
       font-weight: 600;
+      text-decoration: none;
     }
 
     a:hover {
@@ -88,45 +96,70 @@
     }
 
     footer {
-      margin-top: auto;
-      padding-top: 40px;
-      font-size: 0.9em;
-      color: var(--morado-oscuro);
       text-align: center;
+      padding: 25px 15px;
+      background-color: var(--blanco);
+      font-size: 0.95em;
     }
 
     .social-links a {
+      color: var(--morado-principal);
       margin: 0 10px;
-      color: var(--violeta-principal);
       text-decoration: none;
+      font-weight: 600;
     }
 
     .social-links a:hover {
       text-decoration: underline;
     }
+
+    .notice {
+      margin-top: 10px;
+      font-style: italic;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .banner {
+        height: 180px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- Reemplaza 'logo.png' por tu ruta de logo -->
-    <img src="logo4.jpeg" alt="Logo Fundación" />
-    <h1>Informes</h1>
-    <p>Accede a los informes disponibles en formato PDF:</p>
+    <img src="logo2.jpeg" alt="Logo Caminando a la Esperanza">
+    <h1>Caminando a la Esperanza</h1>
   </header>
 
-  <ul>
-    <li><a href="https://tusitio.com/informe1.pdf" target="_blank">Informe 1: Análisis de ventas</a></li>
-    <li><a href="https://tusitio.com/informe2.pdf" target="_blank">Informe 2: Estado financiero Q2</a></li>
-    <li><a href="https://tusitio.com/informe3.pdf" target="_blank">Informe 3: Estrategia 2025</a></li>
-  </ul>
+  <div class="banner"></div> <!-- Puedes reemplazar la imagen con "banner.jpg" -->
+
+  <main>
+    <section class="pdf-section">
+      <h2>Informes disponibles:</h2>
+      <ul>
+        <li><a href="https://tusitio.com/informe1.pdf" target="_blank">📄 Informe 1: Análisis de ventas</a></li>
+        <li><a href="https://tusitio.com/informe2.pdf" target="_blank">📄 Informe 2: Estado financiero Q2</a></li>
+        <li><a href="https://tusitio.com/informe3.pdf" target="_blank">📄 Informe 3: Estrategia 2025</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>Síguenos en redes sociales:</p>
+    <p>Síguenos en nuestras redes:</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Twitter</a> |
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/hogarcaminandoalaesperanza" target="_blank">Instagram</a>
     </div>
+    <div class="notice">⚠️ Sitio en construcción</div>
   </footer>
 </body>
 </html>
