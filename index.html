@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Informes PDF - Fundación Caminando a la Esperanza</title>
+  <title>Caminando a la Esperanza - Sitio en Construcción</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --violeta-principal: #9404cc;
-      --morado-oscuro: #442c64;
+      --violeta: #9404cc;
+      --morado: #442c64;
       --lavanda: #dcc4fc;
-      --texto: #2b2b2b;
       --blanco: #ffffff;
+      --gris: #f8f8f8;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--lavanda);
-      color: var(--texto);
+      color: var(--morado);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
       min-height: 100vh;
-      margin: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 20px;
     }
 
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
       margin-bottom: 30px;
     }
 
@@ -41,45 +42,51 @@
       height: auto;
       margin-bottom: 15px;
       border-radius: 50%;
-      border: 3px solid var(--violeta-principal);
+      border: 3px solid var(--violeta);
     }
 
     h1 {
       font-size: 2.2em;
-      color: var(--violeta-principal);
-      margin: 0;
+      color: var(--violeta);
+      margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1em;
-      color: var(--morado-oscuro);
+    .notice {
+      background: var(--violeta);
+      color: var(--blanco);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-block;
       margin-bottom: 30px;
-      text-align: center;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .pdf-section {
+      background: var(--blanco);
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
       max-width: 600px;
       width: 100%;
     }
 
-    li {
-      background: var(--blanco);
+    .pdf-section h2 {
       margin-bottom: 15px;
-      padding: 18px 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
+      font-size: 1.3em;
+      color: var(--morado);
     }
 
-    li:hover {
-      transform: translateY(-3px);
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 12px;
     }
 
     a {
+      color: var(--violeta);
       text-decoration: none;
-      color: var(--violeta-principal);
       font-weight: 600;
     }
 
@@ -88,44 +95,61 @@
     }
 
     footer {
-      margin-top: auto;
-      padding-top: 40px;
-      font-size: 0.9em;
-      color: var(--morado-oscuro);
+      margin-top: 40px;
       text-align: center;
+      font-size: 0.9em;
+    }
+
+    .social-links {
+      margin-top: 10px;
     }
 
     .social-links a {
       margin: 0 10px;
-      color: var(--violeta-principal);
+      color: var(--violeta);
       text-decoration: none;
     }
 
     .social-links a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      .pdf-section {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- Reemplaza 'logo.png' por tu ruta de logo -->
-    <img src="logo4.jpeg" alt="Logo Fundación" />
-    <h1>Informes</h1>
-    <p>Accede a los informes disponibles en formato PDF:</p>
+    <!-- Logo de la fundación -->
+    <img src="logo3.jpeg" alt="Logo Caminando a la Esperanza">
+    <h1>Caminando a la Esperanza</h1>
+    <div class="notice">⚠️ Sitio en construcción</div>
   </header>
 
-  <ul>
-    <li><a href="https://tusitio.com/informe1.pdf" target="_blank">Informe 1: Análisis de ventas</a></li>
-    <li><a href="https://tusitio.com/informe2.pdf" target="_blank">Informe 2: Estado financiero Q2</a></li>
-    <li><a href="https://tusitio.com/informe3.pdf" target="_blank">Informe 3: Estrategia 2025</a></li>
-  </ul>
+  <section class="pdf-section">
+    <h2>Informes disponibles:</h2>
+    <ul>
+      <li><a href="https://tusitio.com/informe1.pdf" target="_blank">📄 Informe 1: Análisis de ventas</a></li>
+      <li><a href="https://tusitio.com/informe2.pdf" target="_blank">📄 Informe 2: Estado financiero Q2</a></li>
+      <li><a href="https://tusitio.com/informe3.pdf" target="_blank">📄 Informe 3: Estrategia 2025</a></li>
+    </ul>
+  </section>
 
   <footer>
-    <p>Síguenos en redes sociales:</p>
+    <p>Síguenos en nuestras redes:</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Twitter</a> |
-      <a href="https://www.instagram.com/hogarcaminandoalaesperanza/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/hogarcaminandoalaesperanza" target="_blank">Instagram</a>
     </div>
   </footer>
 </body>
