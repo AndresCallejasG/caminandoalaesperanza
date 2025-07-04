@@ -31,15 +31,18 @@
     header {
       background-color: var(--blanco);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: 20px;
+      justify-content: center;
+      padding: 25px 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
     header img {
-      width: 60px;
+      width: 80px;
       height: auto;
-      margin-right: 15px;
+      margin-bottom: 10px;
     }
 
     header h1 {
@@ -48,7 +51,7 @@
     }
 
     .banner {
-      display: none; /* oculto por defecto */
+      display: none;
       width: 100%;
       height: 250px;
       background-image: url('banner.jpg'); /* Reemplaza con tu imagen */
@@ -123,15 +126,6 @@
     @media (max-width: 768px) {
       .banner {
         display: block;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      header img {
-        margin-bottom: 10px;
       }
 
       .pdf-section {
