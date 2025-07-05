@@ -53,11 +53,16 @@
     .banner {
       display: none;
       width: 100%;
-      height: 250px;
       background-image: url('banner.jpg'); /* Reemplaza con tu imagen */
       background-size: cover;
       background-position: center;
-      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        display: block;
+        aspect-ratio: 3/2; /* Mantiene proporción adaptable */
+      }
     }
 
     main {
@@ -79,6 +84,16 @@
     .pdf-section h2 {
       margin-bottom: 20px;
       font-size: 1.4em;
+    }
+
+    .year-group {
+      margin-bottom: 30px;
+    }
+
+    .year-group h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: var(--morado-principal);
     }
 
     ul {
@@ -124,10 +139,6 @@
     }
 
     @media (max-width: 768px) {
-      .banner {
-        display: block;
-      }
-
       .pdf-section {
         padding: 20px;
       }
@@ -149,12 +160,23 @@
 
   <main>
     <section class="pdf-section">
-      <h2>Informes disponibles:</h2>
-      <ul>
-        <li><a href="https://tusitio.com/informe1.pdf" target="_blank">📄 Informe 1: Análisis de ventas</a></li>
-        <li><a href="https://tusitio.com/informe2.pdf" target="_blank">📄 Informe 2: Estado financiero Q2</a></li>
-        <li><a href="https://tusitio.com/informe3.pdf" target="_blank">📄 Informe 3: Estrategia 2025</a></li>
-      </ul>
+      <h2>Documentos legales</h2>
+
+      <div class="year-group">
+        <h3>📁 Informes 2025</h3>
+        <ul>
+          <li><a href="https://tusitio.com/informe2025-1.pdf" target="_blank">📄 Informe 2025 - Enero</a></li>
+          <li><a href="https://tusitio.com/informe2025-2.pdf" target="_blank">📄 Informe 2025 - Febrero</a></li>
+        </ul>
+      </div>
+
+      <div class="year-group">
+        <h3>📁 Informes 2024</h3>
+        <ul>
+          <li><a href="https://tusitio.com/informe2024-1.pdf" target="_blank">📄 Informe 2024 - Octubre</a></li>
+          <li><a href="https://tusitio.com/informe2024-2.pdf" target="_blank">📄 Informe 2024 - Noviembre</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -162,6 +184,7 @@
     <p>Síguenos en nuestras redes:</p>
     <div class="social-links">
       <a href="https://www.instagram.com/hogarcaminandoalaesperanza" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/Hogargeriatricocaminandoalaesperanza/" target="_blank">Facebook</a>
     </div>
     <div class="notice">⚠️ Sitio en construcción</div>
   </footer>
